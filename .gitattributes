@@ -1,0 +1,211 @@
+# ============================================================
+# === 1. OPERATING SYSTEMS ===================================
+# ============================================================
+
+# Windows
+*.bat                     text eol=crlf
+
+# macOS/Linux shell scripts
+*.sh                      text eol=lf
+
+# Misc OS-specific configs
+.DS_Store                 linguist-generated
+.directory                linguist-generated
+Thumbs.db                 linguist-generated
+Icon                      linguist-generated
+.com.apple.timemachine.donotpresent linguist-generated
+
+# ============================================================
+# === 2. IDEs & EDITORS ======================================
+# ============================================================
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+*.iml                     linguist-generated
+.idea/*                   linguist-generated
+
+# Visual Studio Code
+.vscode/*                 text eol=lf
+\!.vscode/settings.json
+\!.vscode/tasks.json
+\!.vscode/launch.json
+\!.vscode/extensions.json
+\!.vscode/*.code-snippets
+
+# ============================================================
+# === 3. BUILD SYSTEMS & TOOLS ===============================
+# ============================================================
+
+### Vite ###
+vite.config.ts             text eol=lf
+vite.config.js             text eol=lf
+.vite/                    linguist-generated
+**/.vite/                 linguist-generated
+
+### Yarn 2+ Zero-Install ###
+/.yarn/**                 linguist-vendored
+/.yarn/releases/*         binary
+/.yarn/plugins/**/*       binary
+/.pnp.*                   binary linguist-generated
+
+### Nx Workspace ###
+.nx/                      linguist-generated
+.project-graph.*          linguist-generated
+.project-graph/**         linguist-generated
+.task-graph.*             linguist-generated
+.task-graph/**            linguist-generated
+.cache/                   linguist-generated
+tmp/                      linguist-generated
+dist/                     linguist-generated
+coverage/                 linguist-generated
+
+### Gradle ###
+.gradle/                  linguist-generated
+**/build/**               linguist-generated
+
+### Maven ###
+target/                   linguist-generated
+
+### Babel ###
+.babelrc                   text eol=lf
+.babelrc.json              text eol=lf
+babel.config.js            text eol=lf
+
+### ESLint ###
+.eslintrc                  text eol=lf
+.eslintrc.js               text eol=lf
+.eslintrc.json             text eol=lf
+.eslintignore              text eol=lf
+
+### Prettier ###
+.prettierrc                text eol=lf
+.prettierrc.json           text eol=lf
+.prettierignore            text eol=lf
+
+# ============================================================
+# === 4. LANGUAGES & FRAMEWORKS ==============================
+# ============================================================
+
+### TypeScript / JavaScript (Frontend) ###
+*.ts                      text eol=lf
+*.tsx                     text eol=lf
+*.js                      text eol=lf
+*.jsx                     text eol=lf
+*.mjs                     text eol=lf
+*.cjs                     text eol=lf
+*.json                    text eol=lf
+*.tsbuildinfo             linguist-generated
+
+### React (Frontend) ###
+*.js                      text eol=lf
+*.jsx                     text eol=lf
+*.tsx                     text eol=lf
+*.ts                      text eol=lf
+
+### Styles / Markup ###
+*.html                    text eol=lf
+*.css                     text eol=lf
+*.scss                    text eol=lf
+*.sass                    text eol=lf
+*.less                    text eol=lf
+
+### Java (Backend) ###
+*.java                    text eol=lf
+*.jar                     binary
+*.war                     binary
+*.class                   binary
+
+### Spring Boot (Backend) ###
+application.properties    text eol=lf
+application.yml           text eol=lf
+
+# ============================================================
+# === 5. CONTAINERIZATION & INFRA ============================
+# ============================================================
+
+### Docker ###
+Dockerfile                text eol=lf
+*.dockerignore            text eol=lf
+**/Dockerfile             text eol=lf
+
+### Kubernetes ###
+k8s/**                    text eol=lf
+*.k8s.yaml                text eol=lf
+*.k8s.yml                 text eol=lf
+
+### Terraform ###
+*.tf                      text eol=lf
+*.tfvars                  text eol=lf
+.terraform/               linguist-generated
+.terraform.lock.hcl       linguist-generated
+*.tfstate                 binary
+*.tfstate.*               binary
+
+### Serverless ###
+.serverless/              linguist-generated
+serverless.yml            text eol=lf
+
+# ============================================================
+# === 6. CI/CD CONFIGURATION ================================
+# ============================================================
+
+### GitHub Actions ###
+.github/workflows/*       text eol=lf
+
+### GitLab ###
+.gitlab-ci.yml            text eol=lf
+
+### CircleCI ###
+.circleci/config.yml      text eol=lf
+
+### Jenkins ###
+.jenkinsfile              text eol=lf
+
+### Travis CI ###
+.travis.yml               text eol=lf
+
+### Bitbucket Pipelines ###
+bitbucket-pipelines.yml   text eol=lf
+
+# ============================================================
+# === 7. DOCUMENTATION & METADATA ============================
+# ============================================================
+
+*.md                      text eol=lf
+*.txt                     text eol=lf
+*.env                     text eol=lf
+*.yml                     text eol=lf
+*.yaml                    text eol=lf
+.editorconfig             text eol=lf
+LICENSE                   text eol=lf
+README*                   text eol=lf
+.gitignore                text eol=lf
+.gitattributes            text eol=lf
+.dockerignore             text eol=lf
+
+# ============================================================
+# === 8. MISCELLANEOUS =======================================
+# ============================================================
+
+# Lockfiles
+package-lock.json         text eol=lf
+yarn.lock                 text eol=lf
+pnpm-lock.yaml            text eol=lf
+
+# Markdown JSX (MDX)
+*.mdx                     text eol=lf
+
+# SVG and images
+*.svg                     text eol=lf
+
+# Binary formats (fallback catch-all)
+*.zip                     binary
+*.tar.gz                  binary
+*.rar                     binary
+*.exe                     binary
+*.dll                     binary
+*.iso                     binary
+*.img                     binary
+*.dmg                     binary
+*.psd                     binary
+*.apk                     binary
+*.ipa                     binary
