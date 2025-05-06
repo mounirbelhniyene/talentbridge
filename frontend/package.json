@@ -1,12 +1,21 @@
 {
   "name": "frontend",
   "private": true,
-  "version": "0.0.git 0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --color",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:strict": "npm run lint -- --max-warnings=0",
+    "lint:ci": "npm run lint -- --quiet --format junit -o reports/eslint/junit.xml",
+    "format": "prettier --config .prettierrc --write \"**/*.{js,jsx,ts,tsx,md,json,css,scss}\"",
+    "format:check": "prettier --config .prettierrc --check \"**/*.{js,jsx,ts,tsx,md,json,css,scss}\"",
+    "validate": "npm run format:check && npm run lint:strict && npm run type-check",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -18,10 +27,13 @@
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.0.0",
+    "prettier": "^3.5.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.32.0",
     "vite": "^6.3.5"

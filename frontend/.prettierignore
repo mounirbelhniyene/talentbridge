@@ -1,0 +1,47 @@
+# Ignore artifacts
+dist
+node_modules
+*.min.js
+*.min.css
+
+# Ignore configuration files
+*.config.js
+*.config.ts
+vite.config.ts
+
+# Ignore all dotfiles
+.*
+!.eslintrc.cjs
+!.prettierrc.cjs
+!.gitignore
+
+# Ignore tests and snapshots
+__tests__
+__snapshots__
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Ignore public assets
+/public
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.webp
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# Ignore documentation
+*.md
+CHANGELOG.md
+
+# Ignore package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
